@@ -69,7 +69,9 @@ var broadcastStock = function(action, data) {
 var refreshStock = function(action, data) {
 	stock.frutas.forEach(function(item) {
 		if (data.fruta === item.fruta) {
-			item.cantidad = (action === 'sell') ? item.cantidad - Math.abs(parseInt(data.cantidad)) : item.cantidad + Math.abs(parseInt(data.cantidad));
+			if(!isNan(item.cantidad)){
+				item.cantidad = (action === 'sell') ? item.cantidad - Math.abs(parseInt(data.cantidad)) : item.cantidad + Math.abs(parseInt(data.cantidad));
+			}
 			return false;
 		}
 	});
