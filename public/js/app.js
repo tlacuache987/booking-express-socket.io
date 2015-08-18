@@ -56,9 +56,10 @@ $(document).ready(function() {
 	});
 
 	var sendEvent = function(event) {
+		var value = $("#cantidadTxt").val().trim();
 		socket.emit(event, {
 			fruta : $("#frutasSelect option:selected").text(),
-			cantidad : $("#cantidadTxt").val()
+			cantidad : (value===""||isNan(value))?(0):(value)
 		});
 	};
 
