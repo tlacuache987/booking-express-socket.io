@@ -57,10 +57,16 @@ $(document).ready(function() {
 
 	var sendEvent = function(event) {
 		var value = $("#cantidadTxt").val().trim();
-		socket.emit(event, {
-			fruta : $("#frutasSelect option:selected").text(),
-			cantidad : (value===""||isNan(value))?(0):(value)
-		});
+		
+		if(value===""||isNaN(value)){
+			alertify.alert("Please enter a integer number.");
+			$("#cantidadTxt").val("")
+		}else{
+			socket.emit(event, {
+				fruta : $("#frutasSelect option:selected").text(),
+				cantidad : value
+			});
+		}
 	};
 
 	socket.on('welcome', function(data) {

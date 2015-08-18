@@ -4,6 +4,9 @@
 		<meta charset="UTF-8">
 		<title>Booking Grocery App</title>
 		<link rel="stylesheet" type="text/css" href="/static/css/form-style.css">
+		
+		<link rel="stylesheet" type="text/css" href="/static/css/alertify.core.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/alertify.default.css" id="toggleCSS" />
 	</head>
 	<body>
 		<h2>Booking Grocery App</h2>
@@ -38,7 +41,7 @@
 					<tr>
 						<td>Quantity</td>
 						<td>
-						<input type="text" id="cantidadTxt" placeholder="(only integers please)" /><br />(only integer numbers please)
+						<input type="text" id="cantidadTxt" placeholder="(only integers please)" />
 						</td>
 					</tr>
 					<tr>
@@ -54,6 +57,7 @@
 		</div>
 
 		<script src="/static/js/jquery-1.11.1.js"></script>
+		<script src="/static/js/alertify.min.js"></script>
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="/static/js/app.js"></script>
 
