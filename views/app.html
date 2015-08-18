@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Booking Grocery App</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/form-style.css">
+	</head>
+	<body>
+		<h2>Booking Grocery App</h2>
+		<h3 id="welcomeMsg">loading...</h3>
+
+		<div class="datagrid" style="width: 80%;">
+			<table id="stock">
+				<thead>
+					<tr>
+						<th>Fruits</th>
+						<th>Quantity</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<br />
+
+		<div class="datagrid" style="width: 50%;">
+			<table>
+				<thead>
+					<tr>
+						<th colspan="2">Order</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Fruit</td>
+						<td id="frutasSelect">loading...</td>
+					</tr>
+					<tr>
+						<td>Quantity</td>
+						<td>
+						<input type="text" id="cantidadTxt" />
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+						<input type="button" value="Buy" id="buyBtn" />
+						<input type="button" value="Sell" id="sellBtn" />
+						</td>
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<script src="/static/js/jquery-1.11.1.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="/static/js/app.js"></script>
+
+	</body>
+</html>
